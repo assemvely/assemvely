@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.ac.assemvely.mappers.ManagerMapper">
+<select id="insert">
+insert into MANAGERBOARDTB (MANAGERBNO,ID,TITLE,MANAGERIMG,POSTING) values(SEQ_MANAGERBNO.NEXTVAL,#{id},#{title},#{managerimg},#{posting})
+
+</select>
+<select id="selectone" resultType="kr.ac.assemvely.vo.ManagerVo">
+ select * from MANAGERBOARDTB where MANAGERBNO=#{managerbno}
+</select>
+
+<select id="selectlist" resultType="kr.ac.assemvely.vo.ManagerVo">
+	select MANAGERBNO,TITLE,WRITEDATE from MANAGERBOARDTB
+</select>
+</mapper>
