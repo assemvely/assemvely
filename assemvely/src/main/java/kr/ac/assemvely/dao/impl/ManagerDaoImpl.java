@@ -34,5 +34,11 @@ public class ManagerDaoImpl implements ManagerDao {
 	public List<ManagerVo> postlist(){
 		return sqlSession.selectList(namespace+".selectlist");
 	}
+
+	@Override
+	public void deleteposting(int managerbno) {
+		sqlSession.delete(namespace+".delete",managerbno);
+		
+	}
 	
 }

@@ -34,6 +34,11 @@ public class ManagerServiceImpl  implements ManagerService {
 		
 		return managerdao.postlist();
 	}
+
+	@Override
+	public void deleteposting(int managerbno) {
+	 managerdao.deleteposting(managerbno);
+	}
 	
 	
 	

@@ -130,11 +130,17 @@ public class ManagerController {
 	}
 	
 	@RequestMapping("/readposting")
-	private String readpoasting(@ModelAttribute("managerbno") int managerbno,Model model){
-		System.out.println("¿©±â");
+	private String readposting(@ModelAttribute("managerbno") int managerbno,Model model){
 		ManagerVo managervo=managerservice.readposting(managerbno);
 		model.addAttribute("READ",managervo);
 		return "readposting";
+	}
+	
+	@RequestMapping("/deleteposting")
+	private String deleteposting(@ModelAttribute("managerbno")int managerbno){
+		
+		managerservice.deleteposting(managerbno);
+		return "postlist";
 	}
 	
 }

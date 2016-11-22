@@ -26,5 +26,7 @@
 			<span class="failed">파일업로드 실패</span>
 		</c:otherwise>
 	</c:choose>
+	
+		<a href="/manager/deleteposting?managerbno={READ.managerbno}"><input type="button" id="save" value="삭제"/></a>
 </body>
 </html>

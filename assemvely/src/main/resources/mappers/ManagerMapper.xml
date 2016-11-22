@@ -16,4 +16,8 @@ insert into MANAGERBOARDTB (MANAGERBNO,ID,TITLE,MANAGERIMG,POSTING) values(SEQ_M
 <select id="selectlist" resultType="kr.ac.assemvely.vo.ManagerVo">
 	select MANAGERBNO,TITLE,WRITEDATE from MANAGERBOARDTB
 </select>
+
+<select id="delete">
+	delete MANAGERBOARDTB where MANAGERBNO=#{managerbno}
+</select>
 </mapper>

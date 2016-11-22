@@ -32,6 +32,12 @@
   </c:forEach>
 
 </table>
-
+	
+		 
+		 
+			
+				<input type="button" value="글쓰기"/>
+		 
+		 
 </body>
 </html>
